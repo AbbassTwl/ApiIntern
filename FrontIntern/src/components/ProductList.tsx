@@ -30,7 +30,7 @@ export default function ProductList({ brandId, pageSize = 6, onBrandsChanged }: 
   const [showCreate, setShowCreate] = useState(false);
   const [showAddBrand, setShowAddBrand] = useState(false);
 
-  const isAdmin = typeof window !== "undefined" && localStorage.getItem("isAdmin") === "true";
+const isAdmin = localStorage.getItem("isAdmin") === "true";
 
   
     // reset to first page when brand, search, or pageSize changes
@@ -94,7 +94,7 @@ const loadPage = useCallback(async (pageNumber: number) => {
   }
 
   return (
-    <div className="flex flex-col gap-4 p-4 max-w-6xl">
+<div className="flex flex-col gap-4 p-4 max-w-6xl mx-auto">
       {/* top bar  search - add brand products*/}
       <div className="flex items-center justify-between gap-3">
         <div className="flex-1 max-w-md">

@@ -25,11 +25,11 @@ export default function Login() {
     setMsg(null);
 
     try {
-      const res = await AuthClient.login({ username, password });
-      if (res?.token) {
+      const user = await AuthClient.login({ username, password });
+      if (user?.token) {
         nav("/", { replace: true });
       } else {
-        setMsg(res?.message || "Invalid username or password");
+        setMsg(user?.message || "Invalid username or password");
       }
     } catch (error) {
 

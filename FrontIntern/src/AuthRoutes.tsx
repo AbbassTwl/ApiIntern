@@ -1,7 +1,7 @@
 import { Navigate, Outlet } from "react-router-dom";
 
 function hasToken() {
-  return typeof window !== "undefined" && !!localStorage.getItem("token");
+  return !!localStorage.getItem("token");
 }
 
 export function ProtectedRoute() {
