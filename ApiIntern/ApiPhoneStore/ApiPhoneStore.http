@@ -1,6 +1,0 @@
-@ApiPhoneStore_HostAddress = http://localhost:5126
-
-GET {{ApiPhoneStore_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
