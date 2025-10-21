@@ -1,0 +1,77 @@
+﻿using BusinessLogicLayer.Dtos.Brands;
+using DataAccessLayer.Entites;
+using DataAccessLayer.Interfaces;
+
+namespace BusinessLogicLayer.Brands
+    {
+    public class BrandService(IBrandRepository repository) : IBrandService
+    {
+        private readonly IBrandRepository _repository = repository;
+
+        public async Task<IEnumerable<BrandResponseDto>> GetBrandsAsync(string? Id, string? search, int page, int pageSize)
+        {
+            var brands = await _repository.GetBrandsAsync(Id, search, page, pageSize);
+            return brands.Select(b => new BrandResponseDto
+            {
+                Id = b.Id,
+                Name = b.Name,
+                Description = b.Description
+            });
+        }
+
+        public async Task<BrandResponseDto?> GetBrandByIdAsync(int id)
+        {
+            var brand = await _repository.GetBrandByIdAsync(id);
+            if (brand is null) return null;
+
+            return new BrandResponseDto
+            {
+                Id = brand.Id,
+                Name = brand.Name,
+                Description = brand.Description
+            };
+        }
+
+        public async Task<BrandResponseDto> AddBrandAsync(BrandRequestDto request)
+        {
+            var brand = new Brand
+            {
+                Name = request.Name,
+                Description = request.Description
+            };
+
+            var created = await _repository.AddBrandAsync(brand);
+
+            return new BrandResponseDto
+            {
+                Id = created.Id,
+                Name = created.Name,
+                Description = created.Description
+            };
+        }
+
+        public async Task<BrandResponseDto> UpdateBrandAsync(int id, BrandRequestDto request)
+        {
+            var brand = new Brand
+            {
+                Id = id,
+                Name = request.Name,
+                Description = request.Description
+            };
+
+            var updated = await _repository.UpdateBrandAsync(id , brand);
+
+            return new BrandResponseDto
+            {
+                Id = updated.Id,
+                Name = updated.Name,
+                Description = updated.Description
+            };
+        }
+
+        public Task<bool> DeleteBrandAsync(int id)
+        {
+            return _repository.DeleteBrandAsync(id);
+        }
+    }
+}
