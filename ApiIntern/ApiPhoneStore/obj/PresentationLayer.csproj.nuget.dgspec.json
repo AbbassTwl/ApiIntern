@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\ApiIntern\\ApiPhoneStore\\PresentationLayer.csproj": {}
+    "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\ApiPhoneStore\\PresentationLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\ApiIntern\\ApiPhoneStore\\PresentationLayer.csproj": {
+    "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\ApiPhoneStore\\PresentationLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ApiIntern\\ApiPhoneStore\\PresentationLayer.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\ApiPhoneStore\\PresentationLayer.csproj",
         "projectName": "PresentationLayer",
-        "projectPath": "C:\\Users\\User\\source\\repos\\ApiIntern\\ApiPhoneStore\\PresentationLayer.csproj",
+        "projectPath": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\ApiPhoneStore\\PresentationLayer.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\ApiIntern\\ApiPhoneStore\\obj\\",
+        "outputPath": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\ApiPhoneStore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\User\\source\\repos\\ApiIntern\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\ApiIntern\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
+              "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
               },
-              "C:\\Users\\User\\source\\repos\\ApiIntern\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\ApiIntern\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\DataAccessLayer.csproj"
               }
             }
           }
@@ -111,14 +111,14 @@
         }
       }
     },
-    "C:\\Users\\User\\source\\repos\\ApiIntern\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+    "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ApiIntern\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
         "projectName": "BusinessLogicLayer",
-        "projectPath": "C:\\Users\\User\\source\\repos\\ApiIntern\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+        "projectPath": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\ApiIntern\\BusinessLogicLayer\\obj\\",
+        "outputPath": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -139,8 +139,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\User\\source\\repos\\ApiIntern\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\ApiIntern\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\DataAccessLayer.csproj"
               }
             }
           }
@@ -198,14 +198,14 @@
         }
       }
     },
-    "C:\\Users\\User\\source\\repos\\ApiIntern\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ApiIntern\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\User\\source\\repos\\ApiIntern\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectPath": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\ApiIntern\\DataAccessLayer\\obj\\",
+        "outputPath": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
