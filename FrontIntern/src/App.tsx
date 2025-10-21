@@ -1,8 +1,8 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import Home from "@/Pages/Home";
-import Login from "@/Pages/Login";
-import Register from "@/Pages/Register";
-import { ProtectedRoute, GuestRoute } from "@/AuthRoutes";
+import Home from "./Pages/Home";
+import Login from "./Pages/Login";
+import Register from "./Pages/Register";
+import { ProtectedRoute, GuestRoute } from "../src/AuthRoutes";
 
 export default function App() {
   return (

@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BrandClient } from "../Client/Brand.client";
 import { PhoneClient } from "../Client/Phone.client";
 import type { BrandResponseDto } from "../Dto/Brand.dto";
 import type { PhoneRequestDto, PhoneResponseDto } from "../Dto/Phone.dto";
+import { X } from "lucide-react";
 
 type Props = {
   phoneId: number;
@@ -21,6 +22,8 @@ export default function EditPhoneForm({ phoneId, initial, onSuccess, onCancel }:
   const [imageUrl, setImageUrl] = useState(initial?.imageUrl ?? "");
   const [brandId, setBrandId] = useState<number | "">(initial?.brandId ?? "");
   const [fetchedBrandName, setFetchedBrandName] = useState("");
+  const [uploading, setUploading] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Fetch available brands
   useEffect(() => {
@@ -50,25 +53,41 @@ export default function EditPhoneForm({ phoneId, initial, onSuccess, onCancel }:
       setBrandId(initial.brandId);
       return;
     }
-    const nameToMatch = (initial?.brandName || fetchedBrandName).trim().toLowerCase();
+    const nameToMatch = (initial?.brandName || fetchedBrandName).toLowerCase();
     if (!nameToMatch || brands.length === 0) return;
-    const match = brands.find(
-      (b) => b.name.trim().toLowerCase() === nameToMatch
-    );
+    const match = brands.find((b) => b.name.toLowerCase() === nameToMatch);
     if (match) setBrandId(match.id);
   }, [brands, brandId, initial?.brandId, initial?.brandName, fetchedBrandName]);
 
+  // Simulated upload (replace with real upload API returning a URL)
+  async function handleFileUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setUploading(true);
+    try {
+      await new Promise((res) => setTimeout(res, 800)); // simulate latency
+      const objectUrl = URL.createObjectURL(file);
+      setImageUrl(objectUrl);
+    } catch (err) {
+      console.error(err);
+      alert("Upload failed. Please try again.");
+    } finally {
+      setUploading(false);
+      if (fileInputRef.current) fileInputRef.current.value = "";
+    }
+  }
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (!name.trim()) return alert("Name is required.");
+    if (!name) return alert("Name is required.");
     if (price === "" || Number(price) <= 0) return alert("Price must be greater than 0.");
     if (brandId === "") return alert("Please choose a brand.");
 
     const dto: PhoneRequestDto = {
-      name: name.trim(),
+      name: name,
       price: Number(price),
-      description: description.trim(),
-      imageUrl: imageUrl.trim(),
+      description: description,
+      imageUrl: imageUrl,
       brandId: Number(brandId),
     };
 
@@ -82,89 +101,121 @@ export default function EditPhoneForm({ phoneId, initial, onSuccess, onCancel }:
   }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="max-w-xl w-full bg-white rounded-2xl shadow p-5"
-    >
-      <h2 className="text-lg font-semibold mb-4">Edit phone</h2>
+    <div className="max-w-xl w-full bg-white rounded-2xl shadow p-5 max-h-[80vh] overflow-y-auto">
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <h2 className="text-lg font-semibold">Edit phone</h2>
 
-      <label className="block mb-3">
-        <div className="text-sm mb-1">Name</div>
-        <input
-          className="w-full border rounded px-3 py-2"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-      </label>
+        <label className="block">
+          <div className="text-sm mb-1">Name</div>
+          <input
+            className="w-full border rounded px-3 py-2"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+        </label>
 
-      <label className="block mb-3">
-        <div className="text-sm mb-1">Price (USD)</div>
-        <input
-          type="number"
-          min={0}
-          step="0.01"
-          className="w-full border rounded px-3 py-2"
-          value={price}
-          onChange={(e) =>
-            setPrice(e.target.value === "" ? "" : Number(e.target.value))
-          }
-          required
-        />
-      </label>
+        <label className="block">
+          <div className="text-sm mb-1">Price (USD)</div>
+          <input
+            type="number"
+            min={0}
+            step="0.01"
+            className="w-full border rounded px-3 py-2"
+            value={price}
+            onChange={(e) => setPrice(e.target.value === "" ? "" : Number(e.target.value))}
+            required
+          />
+        </label>
 
-      <label className="block mb-3">
-        <div className="text-sm mb-1">Brand</div>
-        <select
-          className="w-full border rounded px-3 py-2 bg-white"
-          value={brandId}
-          onChange={(e) =>
-            setBrandId(e.target.value === "" ? "" : Number(e.target.value))
-          }
-          required
-        >
-          <option value="">Select brand…</option>
-          {brands.map((b) => (
-            <option key={b.id} value={b.id}>
-              {b.name}
-            </option>
-          ))}
-        </select>
-      </label>
+        <label className="block">
+          <div className="text-sm mb-1">Brand</div>
+          <select
+            className="w-full border rounded px-3 py-2 bg-white"
+            value={brandId}
+            onChange={(e) => setBrandId(e.target.value === "" ? "" : Number(e.target.value))}
+            required
+          >
+            <option value="">Select brand…</option>
+            {brands.map((b) => (
+              <option key={b.id} value={b.id}>
+                {b.name}
+              </option>
+            ))}
+          </select>
+        </label>
 
-      <label className="block mb-3">
-        <div className="text-sm mb-1">Image URL</div>
-        <input
-          className="w-full border rounded px-3 py-2"
-          value={imageUrl}
-          onChange={(e) => setImageUrl(e.target.value)}
-        />
-      </label>
+        <div className="block">
+          <div className="text-sm mb-1">Image URL (optional)</div>
+          <div className="flex items-center gap-2">
+            <input
+              className="w-full border rounded px-3 py-2"
+              value={imageUrl}
+              onChange={(e) => setImageUrl(e.target.value)}
+              placeholder="https://…"
+            />
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="image/*"
+              onChange={handleFileUpload}
+              disabled={uploading}
+              className="hidden"
+              id="editFileInput"
+            />
+            <button
+              type="button"
+              onClick={() => fileInputRef.current?.click()}
+              className="px-3 py-2 border rounded hover:bg-gray-50"
+            >
+              {uploading ? "Uploading..." : "Upload"}
+            </button>
+          </div>
 
-      <label className="block mb-4">
-        <div className="text-sm mb-1">Description</div>
-        <textarea
-          className="w-full border rounded px-3 py-2 min-h-24"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
-      </label>
+          {imageUrl && (
+            <div className="relative inline-block mt-3">
+              <img
+                src={imageUrl}
+                alt="Preview"
+                className="max-h-40 rounded border object-contain"
+              />
+              <button
+                type="button"
+                onClick={() => setImageUrl("")}
+                className="absolute top-1 right-1 bg-white border rounded-full p-0.5 shadow hover:bg-gray-100"
+                title="Remove image"
+              >
+                <X size={14} className="text-gray-700" />
+              </button>
+            </div>
+          )}
+        </div>
 
-      <div className="flex gap-2">
-        <button
-          type="submit"
-          className="px-4 py-2 bg-green-600 rounded text-white hover:bg-green-700"
-        >
-          Save changes
-        </button>
-        <button
-          type="button"
-          className="px-4 py-2 bg-red-600 text-white hover:bg-red-700 border"
-          onClick={onCancel}
-        >
-          Cancel
-        </button>
-      </div>
-    </form>
+        <label className="block">
+          <div className="text-sm mb-1">Description</div>
+          <textarea
+            className="w-full border rounded px-3 py-2 min-h-24"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
+        </label>
+
+        <div className="flex gap-2 pt-1">
+          <button
+            type="submit"
+            className="px-4 py-2 bg-green-600 rounded text-white hover:bg-green-700"
+          >
+            Save changes
+          </button>
+          <button
+            type="button"
+            className="px-4 py-2 bg-red-600 text-white hover:bg-red-700 border"
+            onClick={onCancel}
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
   );
 }

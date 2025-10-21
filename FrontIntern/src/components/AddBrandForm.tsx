@@ -15,11 +15,11 @@ export default function AddBrandForm({ onSuccess, onCancel }: Props) {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
 
-    if (!name.trim()) return alert("Name is required.");
+    if (!name) return alert("Name is required.");
 
     const dto: BrandRequestDto = {
-      name: name.trim(),
-      description: description.trim(),
+      name: name,
+      description: description,
     };
 
     try {

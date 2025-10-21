@@ -1,5 +1,5 @@
 import { Client } from "./Client";
-import type { BrandRequestDto, BrandResponseDto } from "@/Dto/Brand.dto";
+import type { BrandRequestDto, BrandResponseDto } from "../Dto/Brand.dto";
 
 export const BrandClient = {
   async getBrands(brandId?: string, search?: string, page = 1, pageSize = 100) {

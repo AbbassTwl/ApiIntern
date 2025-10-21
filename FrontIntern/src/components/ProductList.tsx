@@ -1,14 +1,14 @@
 import { useEffect, useState, useCallback } from "react";
-import type { PhoneResponseDto } from "@/Dto/Phone.dto";
-import { PhoneClient } from "@/Client/Phone.client";
+import type { PhoneResponseDto } from "../Dto/Phone.dto";
+import { PhoneClient } from "../Client/Phone.client";
 import SearchBar from "./SearchBar";
 import { PhoneCard } from "./PhoneCard";
-import EditPhoneForm from "@/components/EditPhoneForm";
-import AddPhoneForm from "@/components/AddPhoneForm";
-import AddBrandForm from "@/components/AddBrandForm";
-import { Button } from "@/components/ui/button";
+import EditPhoneForm from "../components/EditPhoneForm";
+import AddPhoneForm from "../components/AddPhoneForm";
+import AddBrandForm from "../components/AddBrandForm";
+import { Button } from "../components/ui/button";
 import { Plus } from "lucide-react";
-import { useDebouncedValue } from "@/hooks/useDebouncedValue";
+import { useDebouncedValue } from "../hooks/useDebouncedValue";
 
 type Props = {
   brandId: number;
@@ -23,34 +23,41 @@ export default function ProductList({ brandId, pageSize = 6, onBrandsChanged }: 
   const [page, setPage] = useState(1);
 
   const [editing, setEditing] = useState<{
-    id: number;
-    initial: { name: string; price: number; description: string; imageUrl: string };
-  } | null>(null);
+      id: number;
+      initial: { name: string; price: number; description: string; imageUrl: string };
+    } | null>(null);
 
   const [showCreate, setShowCreate] = useState(false);
   const [showAddBrand, setShowAddBrand] = useState(false);
 
   const isAdmin = typeof window !== "undefined" && localStorage.getItem("isAdmin") === "true";
 
-  // Reset to first page when filters change
+  
+    // reset to first page when brand, search, or pageSize changes
   useEffect(() => {
     setPage(1);
   }, [brandId, debounced, pageSize]);
 
-  const loadPage = useCallback(
-    async (p: number) => {
-      const q = debounced || undefined;
-      const rows = await PhoneClient.getPhones(brandId, q, p, pageSize);
-      setPhones(rows ?? []);
-      return rows ?? [];
-    },
-    [brandId, debounced, pageSize]
+    // load phones for the current filters and page
+const loadPage = useCallback(async (pageNumber: number) => {
+  const data = await PhoneClient.getPhones(
+    brandId,
+    debounced || undefined,  
+    pageNumber,
+    pageSize
   );
+  const phonesList = data ?? [];
+  setPhones(phonesList);
+  return phonesList;
+}, [brandId, debounced, pageSize]);
 
+
+  // auto-load phones when page or filters change
   useEffect(() => {
     loadPage(page).catch(() => setPhones([]));
   }, [loadPage, page]);
 
+  // delete phone and reload (go back if current page becomes empty)
   async function handleDelete(id: number) {
     if (!confirm("Delete this phone?")) return;
     try {
@@ -66,13 +73,15 @@ export default function ProductList({ brandId, pageSize = 6, onBrandsChanged }: 
     }
   }
 
+
+  // pagination 
   async function handleNextPage() {
     const nextPage = page + 1;
     const nextRows = await PhoneClient.getPhones(brandId, debounced || undefined, nextPage, pageSize);
     if (nextRows && nextRows.length > 0) {
       setPage(nextPage);
       setPhones(nextRows);
-    } // else do nothing (don’t go to empty page)
+    } 
   }
 
   async function handlePrevPage() {
@@ -86,7 +95,7 @@ export default function ProductList({ brandId, pageSize = 6, onBrandsChanged }: 
 
   return (
     <div className="flex flex-col gap-4 p-4 max-w-6xl">
-      {/* top bar */}
+      {/* top bar  search - add brand products*/}
       <div className="flex items-center justify-between gap-3">
         <div className="flex-1 max-w-md">
           <SearchBar value={search} onChange={setSearch} />
@@ -104,7 +113,7 @@ export default function ProductList({ brandId, pageSize = 6, onBrandsChanged }: 
         )}
       </div>
 
-      {/* grid */}
+      {/* phones */}
       {phones.length === 0 ? (
         <div className="grid place-items-center h-40 text-gray-600">No products found.</div>
       ) : (

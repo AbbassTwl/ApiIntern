@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/footer";
-import Sidebar from "@/components/SideBar";
-import ProductList from "@/components/ProductList";
+import Header from "../components/Header";
+import Footer from "../components/footer";
+import Sidebar from "../components/SideBar";
+import ProductList from "../components/ProductList";
 
 export default function Home() {
   const [brandId, setBrandId] = useState<number>(0);

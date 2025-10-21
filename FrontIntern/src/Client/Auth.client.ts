@@ -1,10 +1,10 @@
 import { Client, setAuthToken } from "./Client";
-import type { LoginRequestDto, RegisterRequestDto, AuthResponseDto } from "@/Dto/Auth.dto";
+import type { LoginRequestDto, RegisterRequestDto, AuthResponseDto } from "../Dto/Auth.dto";
 
 export const AuthClient = {
   async register(dto: RegisterRequestDto) {
     const { data } = await Client.post<AuthResponseDto>("/Auth/register", {
-      username: dto.username.trim(),
+      username: dto.username,
       password: dto.password,
       asAdmin: !!dto.asAdmin,
     });
@@ -13,7 +13,7 @@ export const AuthClient = {
 
   async login(dto: LoginRequestDto) {
     const { data } = await Client.post<AuthResponseDto>("/Auth/login", {
-      username: dto.username.trim(),
+      username: dto.username,
       password: dto.password,
     });
 

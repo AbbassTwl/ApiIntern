@@ -1,5 +1,5 @@
 import { Client } from "./Client";
-import type { MeResponse, UserResponseDto } from "@/Dto/User.dto";
+import type { MeResponse, UserResponseDto } from "../Dto/User.dto";
 
 export const UserClient = {
   me: async () => {

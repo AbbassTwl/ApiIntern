@@ -21,7 +21,7 @@ export function PhoneCard({
         <div className="text-xs text-gray-500">{brand}</div>
         <h2 className="text-lg font-semibold mt-0.5">{name}</h2>
         <p className="text-xl font-bold text-blue-600 mt-2">
-          ${price.toFixed(2)}
+          ${price}
         </p>
 
         {desc?.length ? (
