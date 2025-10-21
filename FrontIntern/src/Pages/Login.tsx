@@ -31,11 +31,8 @@ export default function Login() {
       } else {
         setMsg(user?.message || "Invalid username or password");
       }
-    } catch (error) {
-
-      setMsg(error instanceof Error ? error.message : "Login failed");
-    } finally {
-      setLoading(false);
+    } catch {
+      return
     }
   }
 

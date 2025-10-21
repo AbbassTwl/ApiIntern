@@ -21,40 +21,56 @@ export default function ProductList({ brandId, pageSize = 6, onBrandsChanged }: 
   const [search, setSearch] = useState("");
   const debounced = useDebouncedValue(search, 300);
   const [page, setPage] = useState(1);
+  const [hasNextPage, setHasNextPage] = useState(true);
 
   const [editing, setEditing] = useState<{
-      id: number;
-      initial: { name: string; price: number; description: string; imageUrl: string };
-    } | null>(null);
+    id: number;
+    initial: { name: string; price: number; description: string; imageUrl: string };} | null>(null);
 
   const [showCreate, setShowCreate] = useState(false);
   const [showAddBrand, setShowAddBrand] = useState(false);
 
-const isAdmin = localStorage.getItem("isAdmin") === "true";
+  const isAdmin = localStorage.getItem("isAdmin") === "true";
 
-  
-    // reset to first page when brand, search, or pageSize changes
+  // reset to first page (and re-enable Next) when brand/search/pagesize changes
   useEffect(() => {
     setPage(1);
+    setHasNextPage(true);
   }, [brandId, debounced, pageSize]);
 
-    // load phones for the current filters and page
-const loadPage = useCallback(async (pageNumber: number) => {
-  const data = await PhoneClient.getPhones(
-    brandId,
-    debounced || undefined,  
-    pageNumber,
-    pageSize
+  // load phones for the current filters and page +  next page
+  const loadPage = useCallback(
+    async (pageNumber: number) => {
+      const rows = await PhoneClient.getPhones(
+        brandId,
+        debounced || undefined,
+        pageNumber,
+        pageSize
+      );
+      const current = rows ?? [];
+      setPhones(current);
+
+      // next page once to know if Next should be enabled
+      const nextPage = pageNumber + 1;
+      const nextPageItems = await PhoneClient.getPhones(
+        brandId,
+        debounced || undefined,
+        nextPage,
+        pageSize
+      );
+      setHasNextPage(!!nextPageItems && nextPageItems.length > 0);
+
+      return current;
+    },
+    [brandId, debounced, pageSize]
   );
-  const phonesList = data ?? [];
-  setPhones(phonesList);
-  return phonesList;
-}, [brandId, debounced, pageSize]);
 
-
-  // auto-load phones when page or filters change
+  // auto load phones when page or filters change
   useEffect(() => {
-    loadPage(page).catch(() => setPhones([]));
+    loadPage(page).catch(() => {
+      setPhones([]);
+      setHasNextPage(false);
+    });
   }, [loadPage, page]);
 
   // delete phone and reload (go back if current page becomes empty)
@@ -65,36 +81,24 @@ const loadPage = useCallback(async (pageNumber: number) => {
       const updated = await loadPage(page);
       if (updated.length === 0 && page > 1) {
         const prev = page - 1;
-        setPage(prev);
-        await loadPage(prev);
+        setPage(prev); 
       }
     } catch {
       alert("Failed to delete. Please try again.");
     }
   }
 
-
-  // pagination 
-  async function handleNextPage() {
-    const nextPage = page + 1;
-    const nextRows = await PhoneClient.getPhones(brandId, debounced || undefined, nextPage, pageSize);
-    if (nextRows && nextRows.length > 0) {
-      setPage(nextPage);
-      setPhones(nextRows);
-    } 
+  // pagination – handlers only change the page; loadPage handles data + hasNextPage
+  function handleNextPage() {
+    if (hasNextPage) setPage((p) => p + 1);
   }
 
-  async function handlePrevPage() {
-    if (page > 1) {
-      const prev = page - 1;
-      const prevRows = await PhoneClient.getPhones(brandId, debounced || undefined, prev, pageSize);
-      setPage(prev);
-      setPhones(prevRows ?? []);
-    }
+  function handlePrevPage() {
+    if (page > 1) setPage((p) => p - 1);
   }
 
   return (
-<div className="flex flex-col gap-4 p-4 max-w-6xl mx-auto">
+    <div className="flex flex-col gap-4 p-4 max-w-6xl mx-auto">
       {/* top bar  search - add brand products*/}
       <div className="flex items-center justify-between gap-3">
         <div className="flex-1 max-w-md">
@@ -150,7 +154,7 @@ const loadPage = useCallback(async (pageNumber: number) => {
           Previous
         </Button>
         <span className="text-sm text-gray-700">Page {page}</span>
-        <Button variant="outline" onClick={handleNextPage}>
+        <Button variant="outline" disabled={!hasNextPage} onClick={handleNextPage}>
           Next
         </Button>
       </div>
