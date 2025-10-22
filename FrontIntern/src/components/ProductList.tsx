@@ -41,13 +41,17 @@ export default function ProductList({ brandId, pageSize = 6, onBrandsChanged }: 
   // load phones for the current filters and page +  next page
   const loadPage = useCallback(
     async (pageNumber: number) => {
-      const rows = await PhoneClient.getPhones(
+
+      const fetchedPhones  = await PhoneClient.getPhones(
+
         brandId,
         debounced || undefined,
         pageNumber,
         pageSize
       );
-      const current = rows ?? [];
+
+      const current = fetchedPhones  ?? [];
+      
       setPhones(current);
 
       // next page once to know if Next should be enabled
