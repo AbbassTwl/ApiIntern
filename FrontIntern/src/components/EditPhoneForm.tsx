@@ -77,6 +77,8 @@ export default function EditPhoneForm({ phoneId, initial, onSuccess, onCancel }:
     }
   }
 
+   // e.preventDefault keep the app in control when form submitted — no page reload, no default behavior, just the custom logic. 
+   
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (!name) return alert("Name is required.");

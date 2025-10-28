@@ -103,7 +103,7 @@ export default function ProductList({ brandId, pageSize = 6, onBrandsChanged }: 
 
   return (
     <div className="flex flex-col gap-4 p-4 max-w-6xl mx-auto">
-      {/* top bar  search - add brand products*/}
+      {/* top bar  search - add brand / products*/}
       <div className="flex items-center justify-between gap-3">
         <div className="flex-1 max-w-md">
           <SearchBar value={search} onChange={setSearch} />

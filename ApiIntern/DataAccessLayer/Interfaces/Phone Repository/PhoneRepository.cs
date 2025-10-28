@@ -18,14 +18,14 @@ public class PhoneRepository : IPhoneRepository
         if (brandId > 0)
             query = query.Where(p => p.BrandId == brandId);
 
-        if (!string.IsNullOrWhiteSpace(search))
-        {
-            var s = search.Trim().ToLower();
-       
-            query = query.Where(p =>
-                EF.Functions.Like(p.Name.ToLower(), $"%{s}%") ||
-                EF.Functions.Like(p.Brand.Name.ToLower(), $"%{s}%"));
-        }
+    if (!string.IsNullOrWhiteSpace(search))
+    {
+        var s = search.Trim().ToLower();
+
+        query = query.Where(p =>
+            p.Name.ToLower().Contains(s) ||
+            p.Brand.Name.ToLower().Contains(s));
+    }
 
         return await query
             .OrderBy(p => p.BrandId)
