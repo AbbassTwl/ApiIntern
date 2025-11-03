@@ -12,7 +12,7 @@ export type AuthResponseDto = {
   token: string;
   expiresAtUtc: string;  
   username: string;
-  isAdmin: boolean;
+  // isAdmin: boolean;
   success: boolean;
   message: string;
 };

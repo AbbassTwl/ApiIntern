@@ -96,7 +96,7 @@ namespace BusinessLogicLayer
                 Token = new JwtSecurityTokenHandler().WriteToken(token),
                 ExpiresAtUtc = expires,
                 Username = user.Username,
-                IsAdmin = user.IsAdmin,
+                //IsAdmin = user.IsAdmin,
             };
         }
     }

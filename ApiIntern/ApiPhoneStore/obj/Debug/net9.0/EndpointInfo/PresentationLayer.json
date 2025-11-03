@@ -500,9 +500,6 @@
             "type": "string",
             "nullable": true
           },
-          "isAdmin": {
-            "type": "boolean"
-          },
           "success": {
             "type": "boolean"
           },
