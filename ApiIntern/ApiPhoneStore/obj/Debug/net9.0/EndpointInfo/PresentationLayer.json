@@ -587,9 +587,6 @@
           "password": {
             "type": "string",
             "nullable": true
-          },
-          "asAdmin": {
-            "type": "boolean"
           }
         },
         "additionalProperties": false

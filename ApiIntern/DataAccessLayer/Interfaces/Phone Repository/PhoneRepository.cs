@@ -18,14 +18,11 @@ public class PhoneRepository : IPhoneRepository
         if (brandId > 0)
             query = query.Where(p => p.BrandId == brandId);
 
-    if (!string.IsNullOrWhiteSpace(search))
-    {
-        var s = search.Trim().ToLower();
-
-        query = query.Where(p =>
-            p.Name.ToLower().Contains(s) ||
-            p.Brand.Name.ToLower().Contains(s));
-    }
+        if (!string.IsNullOrEmpty(search))
+            query = query.Where(p =>
+                (p.Name != null && p.Name.ToLower().Contains(search.ToLower())) ||
+                (p.Brand != null && p.Brand.Name != null && p.Brand.Name.ToLower().Contains(search.ToLower()))
+            );
 
         return await query
             .OrderBy(p => p.BrandId)

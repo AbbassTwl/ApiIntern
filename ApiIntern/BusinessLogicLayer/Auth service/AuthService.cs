@@ -2,15 +2,11 @@
 using DataAccessLayer.Entites;
 using DataAccessLayer.Interfaces.Users_Repository;
 using DataAccessLayer.Services.Security;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 
 
@@ -29,7 +25,6 @@ namespace BusinessLogicLayer
             {
                 Id = u.Id,
                 Username = u.Username,
-                IsAdmin = u.IsAdmin,
             }).ToList();
         }
         // To return a list instead of an enumerable — lists support indexing, counting, etc.
@@ -49,7 +44,6 @@ namespace BusinessLogicLayer
                 Id = Guid.NewGuid(),
                 Username = dto.Username,
                 PasswordHash = PasswordHasher.Hash(dto.Password),
-                IsAdmin = dto.AsAdmin,
             };
 
             await _users.AddAsync(user);
@@ -60,7 +54,6 @@ namespace BusinessLogicLayer
                 Success = true,
                 Message = "User registered successfully.",
                 Username = user.Username,
-                IsAdmin = user.IsAdmin,
                 Token = BuildToken(user).Token,
                 ExpiresAtUtc = BuildToken(user).ExpiresAtUtc
             };

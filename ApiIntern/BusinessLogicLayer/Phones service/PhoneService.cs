@@ -15,7 +15,7 @@ namespace BusinessLogicLayer.Phones
                 Id = p.Id,
                 Name = p.Name,
                 Price = p.Price,
-                BrandName = p.Brand.Name,
+                BrandName = p.Brand!.Name,
                 Description = p.Description,
                 ImageUrl = p.ImageUrl
             });
@@ -31,7 +31,7 @@ namespace BusinessLogicLayer.Phones
                 Id = phone.Id,
                 Name = phone.Name,
                 Price = phone.Price,
-                BrandName = phone.Brand.Name,
+                BrandName = phone.Brand!.Name,
                 Description = phone.Description,
                 ImageUrl = phone.ImageUrl
 
