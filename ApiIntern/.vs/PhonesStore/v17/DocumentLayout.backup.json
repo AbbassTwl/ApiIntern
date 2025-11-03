@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|c:\\users\\user\\source\\internship-phonestore\\apiintern\\businesslogiclayer\\auth service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|solutionrelative:businesslogiclayer\\auth service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|c:\\users\\user\\source\\internship-phonestore\\apiintern\\businesslogiclayer\\dtos\\auth\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|solutionrelative:businesslogiclayer\\dtos\\auth\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50FCD41F-39E6-40BF-B69B-BE31F214A653}|DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\user\\source\\internship-phonestore\\apiintern\\dataaccesslayer\\entites\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50FCD41F-39E6-40BF-B69B-BE31F214A653}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\entites\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F6C1E52-C182-443A-A069-6E7A3F632209}|ApiPhoneStore\\PresentationLayer.csproj|c:\\users\\user\\source\\internship-phonestore\\apiintern\\apiphonestore\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F6C1E52-C182-443A-A069-6E7A3F632209}|ApiPhoneStore\\PresentationLayer.csproj|solutionrelative:apiphonestore\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F6C1E52-C182-443A-A069-6E7A3F632209}|ApiPhoneStore\\PresentationLayer.csproj|c:\\users\\user\\source\\internship-phonestore\\apiintern\\apiphonestore\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F6C1E52-C182-443A-A069-6E7A3F632209}|ApiPhoneStore\\PresentationLayer.csproj|solutionrelative:apiphonestore\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|c:\\users\\user\\source\\internship-phonestore\\apiintern\\businesslogiclayer\\dtos\\auth\\userresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|solutionrelative:businesslogiclayer\\dtos\\auth\\userresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|c:\\users\\user\\source\\internship-phonestore\\apiintern\\businesslogiclayer\\dtos\\auth\\registerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|solutionrelative:businesslogiclayer\\dtos\\auth\\registerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{50FCD41F-39E6-40BF-B69B-BE31F214A653}|DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\user\\source\\internship-phonestore\\apiintern\\dataaccesslayer\\interfaces\\brands repository\\brandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50FCD41F-39E6-40BF-B69B-BE31F214A653}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\interfaces\\brands repository\\brandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,36 +51,12 @@
       "RelativeMoniker": "D:0:0:{4F6C1E52-C182-443A-A069-6E7A3F632209}|ApiPhoneStore\\PresentationLayer.csproj|solutionrelative:apiphonestore\\controllers\\brandscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F6C1E52-C182-443A-A069-6E7A3F632209}|ApiPhoneStore\\PresentationLayer.csproj|c:\\users\\user\\source\\internship-phonestore\\apiintern\\apiphonestore\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F6C1E52-C182-443A-A069-6E7A3F632209}|ApiPhoneStore\\PresentationLayer.csproj|solutionrelative:apiphonestore\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|c:\\users\\user\\source\\internship-phonestore\\apiintern\\businesslogiclayer\\auth service\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|solutionrelative:businesslogiclayer\\auth service\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|c:\\users\\user\\source\\internship-phonestore\\apiintern\\businesslogiclayer\\auth service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|solutionrelative:businesslogiclayer\\auth service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50FCD41F-39E6-40BF-B69B-BE31F214A653}|DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\user\\source\\internship-phonestore\\apiintern\\dataaccesslayer\\entites\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50FCD41F-39E6-40BF-B69B-BE31F214A653}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\entites\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{50FCD41F-39E6-40BF-B69B-BE31F214A653}|DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\user\\source\\internship-phonestore\\apiintern\\dataaccesslayer\\interfaces\\phone repository\\phonerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50FCD41F-39E6-40BF-B69B-BE31F214A653}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\interfaces\\phone repository\\phonerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|c:\\users\\user\\source\\internship-phonestore\\apiintern\\businesslogiclayer\\dtos\\auth\\userresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|solutionrelative:businesslogiclayer\\dtos\\auth\\userresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|c:\\users\\user\\source\\internship-phonestore\\apiintern\\businesslogiclayer\\dtos\\auth\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|solutionrelative:businesslogiclayer\\dtos\\auth\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|c:\\users\\user\\source\\internship-phonestore\\apiintern\\businesslogiclayer\\dtos\\auth\\registerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|solutionrelative:businesslogiclayer\\dtos\\auth\\registerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|c:\\users\\user\\source\\internship-phonestore\\apiintern\\businesslogiclayer\\phones service\\phoneservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|c:\\users\\user\\source\\internship-phonestore\\apiintern\\businesslogiclayer\\phones service\\iphoneservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|solutionrelative:businesslogiclayer\\phones service\\iphoneservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F6C1E52-C182-443A-A069-6E7A3F632209}|ApiPhoneStore\\PresentationLayer.csproj|c:\\users\\user\\source\\internship-phonestore\\apiintern\\apiphonestore\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F6C1E52-C182-443A-A069-6E7A3F632209}|ApiPhoneStore\\PresentationLayer.csproj|solutionrelative:apiphonestore\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3B235685-A6B9-472D-80C0-239B27BEFC53}|BusinessLogicLayer\\BusinessLogicLayer.csproj|c:\\users\\user\\source\\internship-phonestore\\apiintern\\businesslogiclayer\\dtos\\brands\\brandresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,100 +86,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PhoneRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\Interfaces\\Phone Repository\\PhoneRepository.cs",
-              "RelativeDocumentMoniker": "DataAccessLayer\\Interfaces\\Phone Repository\\PhoneRepository.cs",
-              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\Interfaces\\Phone Repository\\PhoneRepository.cs",
-              "RelativeToolTip": "DataAccessLayer\\Interfaces\\Phone Repository\\PhoneRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T12:53:00.881Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IBrandRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\Interfaces\\Brands Repository\\IBrandRepository.cs",
-              "RelativeDocumentMoniker": "DataAccessLayer\\Interfaces\\Brands Repository\\IBrandRepository.cs",
-              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\Interfaces\\Brands Repository\\IBrandRepository.cs",
-              "RelativeToolTip": "DataAccessLayer\\Interfaces\\Brands Repository\\IBrandRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T13:35:42.029Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BrandRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\Interfaces\\Brands Repository\\BrandRepository.cs",
-              "RelativeDocumentMoniker": "DataAccessLayer\\Interfaces\\Brands Repository\\BrandRepository.cs",
-              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\Interfaces\\Brands Repository\\BrandRepository.cs",
-              "RelativeToolTip": "DataAccessLayer\\Interfaces\\Brands Repository\\BrandRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T13:35:59.487Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\Entites\\User.cs",
-              "RelativeDocumentMoniker": "DataAccessLayer\\Entites\\User.cs",
-              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\Entites\\User.cs",
-              "RelativeToolTip": "DataAccessLayer\\Entites\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T12:19:40.953Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IBrandService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Brands service\\IBrandService.cs",
-              "RelativeDocumentMoniker": "BusinessLogicLayer\\Brands service\\IBrandService.cs",
-              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Brands service\\IBrandService.cs",
-              "RelativeToolTip": "BusinessLogicLayer\\Brands service\\IBrandService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T13:41:40.76Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "BrandsController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\ApiPhoneStore\\Controllers\\BrandsController.cs",
-              "RelativeDocumentMoniker": "ApiPhoneStore\\Controllers\\BrandsController.cs",
-              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\ApiPhoneStore\\Controllers\\BrandsController.cs",
-              "RelativeToolTip": "ApiPhoneStore\\Controllers\\BrandsController.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAEwBQAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T13:42:37.915Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BrandService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Brands service\\BrandService.cs",
-              "RelativeDocumentMoniker": "BusinessLogicLayer\\Brands service\\BrandService.cs",
-              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Brands service\\BrandService.cs",
-              "RelativeToolTip": "BusinessLogicLayer\\Brands service\\BrandService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T12:48:38.29Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\ApiPhoneStore\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "ApiPhoneStore\\Controllers\\AdminController.cs",
@@ -192,43 +103,158 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AuthResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Dtos\\Auth\\AuthResponseDto.cs",
-              "RelativeDocumentMoniker": "BusinessLogicLayer\\Dtos\\Auth\\AuthResponseDto.cs",
-              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Dtos\\Auth\\AuthResponseDto.cs",
-              "RelativeToolTip": "BusinessLogicLayer\\Dtos\\Auth\\AuthResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Auth service\\AuthService.cs",
+              "RelativeDocumentMoniker": "BusinessLogicLayer\\Auth service\\AuthService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Auth service\\AuthService.cs*",
+              "RelativeToolTip": "BusinessLogicLayer\\Auth service\\AuthService.cs*",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAowGMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T13:32:36.323Z"
+              "WhenOpened": "2025-10-29T12:32:25.511Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
+              "Title": "BrandRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\Interfaces\\Brands Repository\\BrandRepository.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\Interfaces\\Brands Repository\\BrandRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\Interfaces\\Brands Repository\\BrandRepository.cs",
+              "RelativeToolTip": "DataAccessLayer\\Interfaces\\Brands Repository\\BrandRepository.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAUwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T13:35:59.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\ApiPhoneStore\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "ApiPhoneStore\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\ApiPhoneStore\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "ApiPhoneStore\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAUwBYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T13:33:48.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegisterRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Dtos\\Auth\\RegisterRequestDto.cs",
+              "RelativeDocumentMoniker": "BusinessLogicLayer\\Dtos\\Auth\\RegisterRequestDto.cs",
+              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Dtos\\Auth\\RegisterRequestDto.cs",
+              "RelativeToolTip": "BusinessLogicLayer\\Dtos\\Auth\\RegisterRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T13:32:31.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "UserResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Dtos\\Auth\\UserResponseDto.cs",
               "RelativeDocumentMoniker": "BusinessLogicLayer\\Dtos\\Auth\\UserResponseDto.cs",
               "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Dtos\\Auth\\UserResponseDto.cs",
               "RelativeToolTip": "BusinessLogicLayer\\Dtos\\Auth\\UserResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T13:32:26.794Z"
+              "WhenOpened": "2025-10-29T13:32:26.794Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Auth service\\AuthService.cs",
-              "RelativeDocumentMoniker": "BusinessLogicLayer\\Auth service\\AuthService.cs",
-              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Auth service\\AuthService.cs",
-              "RelativeToolTip": "BusinessLogicLayer\\Auth service\\AuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "AuthResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Dtos\\Auth\\AuthResponseDto.cs",
+              "RelativeDocumentMoniker": "BusinessLogicLayer\\Dtos\\Auth\\AuthResponseDto.cs",
+              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Dtos\\Auth\\AuthResponseDto.cs*",
+              "RelativeToolTip": "BusinessLogicLayer\\Dtos\\Auth\\AuthResponseDto.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T12:32:25.511Z"
+              "WhenOpened": "2025-10-29T13:32:36.323Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\Entites\\User.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\Entites\\User.cs",
+              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\Entites\\User.cs",
+              "RelativeToolTip": "DataAccessLayer\\Entites\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T12:19:40.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BrandService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Brands service\\BrandService.cs",
+              "RelativeDocumentMoniker": "BusinessLogicLayer\\Brands service\\BrandService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Brands service\\BrandService.cs",
+              "RelativeToolTip": "BusinessLogicLayer\\Brands service\\BrandService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T12:48:38.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BrandsController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\ApiPhoneStore\\Controllers\\BrandsController.cs",
+              "RelativeDocumentMoniker": "ApiPhoneStore\\Controllers\\BrandsController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\ApiPhoneStore\\Controllers\\BrandsController.cs",
+              "RelativeToolTip": "ApiPhoneStore\\Controllers\\BrandsController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAEwBQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T13:42:37.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IBrandService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Brands service\\IBrandService.cs",
+              "RelativeDocumentMoniker": "BusinessLogicLayer\\Brands service\\IBrandService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Brands service\\IBrandService.cs",
+              "RelativeToolTip": "BusinessLogicLayer\\Brands service\\IBrandService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T13:41:40.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IBrandRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\Interfaces\\Brands Repository\\IBrandRepository.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\Interfaces\\Brands Repository\\IBrandRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\Interfaces\\Brands Repository\\IBrandRepository.cs",
+              "RelativeToolTip": "DataAccessLayer\\Interfaces\\Brands Repository\\IBrandRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T13:35:42.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PhoneRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\Interfaces\\Phone Repository\\PhoneRepository.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\Interfaces\\Phone Repository\\PhoneRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\DataAccessLayer\\Interfaces\\Phone Repository\\PhoneRepository.cs",
+              "RelativeToolTip": "DataAccessLayer\\Interfaces\\Phone Repository\\PhoneRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T12:53:00.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Auth service\\IAuthService.cs",
               "RelativeDocumentMoniker": "BusinessLogicLayer\\Auth service\\IAuthService.cs",
@@ -240,31 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "RegisterRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Dtos\\Auth\\RegisterRequestDto.cs",
-              "RelativeDocumentMoniker": "BusinessLogicLayer\\Dtos\\Auth\\RegisterRequestDto.cs",
-              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Dtos\\Auth\\RegisterRequestDto.cs",
-              "RelativeToolTip": "BusinessLogicLayer\\Dtos\\Auth\\RegisterRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T13:32:31.216Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\ApiPhoneStore\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "ApiPhoneStore\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\ApiPhoneStore\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "ApiPhoneStore\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T13:33:48.045Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
               "Title": "IPhoneService.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Phones service\\IPhoneService.cs",
               "RelativeDocumentMoniker": "BusinessLogicLayer\\Phones service\\IPhoneService.cs",
@@ -276,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "PhoneService.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\Internship-PhoneStore\\ApiIntern\\BusinessLogicLayer\\Phones service\\PhoneService.cs",
               "RelativeDocumentMoniker": "BusinessLogicLayer\\Phones service\\PhoneService.cs",
