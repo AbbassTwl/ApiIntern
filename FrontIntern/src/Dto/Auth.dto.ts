@@ -6,7 +6,6 @@ export type LoginRequestDto = {
 export type RegisterRequestDto = {
   username: string;
   password: string;
-  asAdmin?: boolean; 
 };
 
 export type AuthResponseDto = {

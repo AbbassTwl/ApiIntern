@@ -6,7 +6,6 @@ export const AuthClient = {
     const { data } = await Client.post<AuthResponseDto>("/Auth/register", {
       username: dto.username,
       password: dto.password,
-      asAdmin: !!dto.asAdmin,
     });
     return data;
   },

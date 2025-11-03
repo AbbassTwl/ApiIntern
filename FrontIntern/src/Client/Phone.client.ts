@@ -2,10 +2,12 @@ import { Client } from "./Client";
 import type { PhoneRequestDto, PhoneResponseDto } from "../Dto/Phone.dto";
 
 export const PhoneClient = {
+  async getPhones(brandId?: number, search?: string, page = 1, pageSize = 6) {
+    const params: Record<string, string | number> = { page, pageSize };
+    // only include brandId if it's valid
+    if (brandId && brandId > 0) params.brandId = brandId;
+    if (search) params.search = search;
 
-  async getPhones(brandId: number, search?: string, page = 1, pageSize = 6) {
-    const params: Record<string, string | number> = { brandId, page, pageSize };
-    if (search && search) params.search = search;
     const { data } = await Client.get<PhoneResponseDto[]>("/Phones", { params });
     return data ?? [];
   },

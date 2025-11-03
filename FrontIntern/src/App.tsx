@@ -3,20 +3,23 @@ import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import { ProtectedRoute, GuestRoute } from "../src/AuthRoutes";
+import { CartProvider } from "./context/CartContext";
 
 export default function App() {
   return (
-    <Routes>
-      <Route element={<ProtectedRoute />}>
-        <Route path="/" element={<Home />} />
-      </Route>
+    <CartProvider> 
+      <Routes>
+        <Route element={<ProtectedRoute />}>
+          <Route path="/" element={<Home />} />
+        </Route>
 
-      <Route element={<GuestRoute />}>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-      </Route>
+        <Route element={<GuestRoute />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Route>
 
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </CartProvider>
   );
 }
