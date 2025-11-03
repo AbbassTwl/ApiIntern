@@ -9,6 +9,6 @@ namespace BusinessLogicLayer.Dtos.Auth
         public string Username { get; set; } = default!;
         //public bool IsAdmin { get; set; }
         public bool Success { get; set; }
-        public string Message { get; set; }
+        public string? Message { get; set; }
     }
 }
