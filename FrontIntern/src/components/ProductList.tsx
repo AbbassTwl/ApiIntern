@@ -7,12 +7,7 @@ import { PhoneCard } from "./PhoneCard";
 import EditPhoneForm from "../components/EditPhoneForm";
 import AddPhoneForm from "../components/AddPhoneForm";
 import AddBrandForm from "../components/AddBrandForm";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationPrevious,
-  PaginationNext,
-} from "../components/ui/pagination";
+import { Pagination,  PaginationContent, PaginationPrevious, PaginationNext} from "../components/ui/pagination";
 import { Button } from "../components/ui/button";
 import { Plus } from "lucide-react";
 import { useDebouncedValue } from "../hooks/useDebouncedValue";
@@ -21,8 +16,7 @@ type Props = {
   brandId: number;
   brandName: string;
   pageSize?: number;
-  onBrandsChanged?: () => void;
-};
+  onBrandsChanged?: () => void; };
 
 export default function ProductList({
   brandId,
@@ -138,7 +132,7 @@ export default function ProductList({
         )}
       </div>
 
-      {/*  Product Grid */}
+      {/* Product Grid */}
       {phones.length === 0 ? (
         <div className="grid place-items-center h-40 text-gray-600">
           No products found {brandName && `for ${brandName}`}.

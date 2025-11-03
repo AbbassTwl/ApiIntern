@@ -26,13 +26,20 @@ export default function Login() {
 
     try {
       const user = await AuthClient.login({ username, password });
+      //  success: has token
       if (user?.token) {
         nav("/", { replace: true });
-      } else {
-        setMsg(user?.message || "Invalid username or password");
       }
-    } catch {
-      return
+    } catch (err) {
+      //  Handle thrown error from AuthClient
+      if (err instanceof Error) {
+        setMsg(err.message); // Shows backend message like “Invalid username or password”
+      } else {
+        setMsg("Login failed. Please try again.");
+      }
+    } finally {
+      //  Always stop loading, even on error
+      setLoading(false);
     }
   }
 
@@ -43,12 +50,14 @@ export default function Login() {
           <CardTitle>Sign in</CardTitle>
           <CardDescription>Welcome back. Enter your credentials.</CardDescription>
         </CardHeader>
+
         <CardContent>
           {msg && (
             <div className="mb-4 rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">
               {msg}
             </div>
           )}
+
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid gap-2">
               <Label htmlFor="username">Username</Label>
@@ -77,11 +86,7 @@ export default function Login() {
                   variant="outline"
                   onClick={() => setShowPw((s) => !s)}
                 >
-                  {showPw ? (
-                    <EyeOff className="h-4 w-4" />
-                  ) : (
-                    <Eye className="h-4 w-4" />
-                  )}
+                  {showPw ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                 </Button>
               </div>
             </div>

@@ -49,6 +49,9 @@ namespace BusinessLogicLayer
             await _users.AddAsync(user);
             await _users.SaveChangesAsync();
 
+            var tokenData = BuildToken(user);
+
+
             return new AuthResponseDto
             {
                 Success = true,
